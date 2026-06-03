@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Managing and organizing tasks</title>
+    <title>Professional Kanban Task Manager</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,24 +13,23 @@
         <button onclick="addTask()">Add Task</button>
     </div>
     <div class="board">
-        <div class="column" id="todo">
+        <div class="column" id="todo-col">
             <h2>To Do</h2>
             <div class="task-list" id="todo"></div>
+        </div> 
+        <div class="column" id="progress-col">
+            <h2>In Progress</h2>
+            <div class="task-list" id="inprogress"></div>
+            <button class="add-action-btn" onclick="openSelection('inprogress')">+</button>
+            <button class="confirm-btn" id="confirm-inprogress" onclick="confirmMove('inprogress')">✓</button>
         </div>
-        <div class="column" id="progress">
-            <h2>in progress</h2>
-            <div class="task-list" id="progress"></div>
-            <button class="add-action-btn" onclick="openSelection('done')">+</button>
-            <button class="confirm-btn" id="confirm-done" onclick="confirmMove('done')">✓</button>
-
-        </div>
-        <div class="column" id="done">
+        <div class="column" id="done-col">
             <h2>Done</h2>
             <div class="task-list" id="done"></div>
             <button class="add-action-btn" onclick="openSelection('done')">+</button>
             <button class="confirm-btn" id="confirm-done" onclick="confirmMove('done')">✓</button>
         </div>
-
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
