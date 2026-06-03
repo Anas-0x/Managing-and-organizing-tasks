@@ -2,10 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="vieport" content="width=device-width, initial-scale=1.0"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Managing and organizing tasks</title>
 </head>
 <body>
     <h1>Managing and organizing tasks</h1>
+    <div class="input-container">
+        <input type="text" id="task-input" placeholder="Write a new task here...">
+        <button onclick="addTask()">Add Task</button>
+    </div>
+    <div class="board">
+        <div class="column" id="to do">
+            <h2>To Do</h2>
+            <div class="task-list" id="to do"></div>
+        </div>
+        <div class="column" id="progress">
+            <h2>in progress</h2>
+            <div class="task-list" id="progress"></div>
+            <button class="add-action-btn" onclick="openSelection('done')">+</button>
+            <button class="confirm-btn" id="confirm-done" onclick="confirmMove('done')">✓</button>
+
+        </div>
+        <div class="column" id="done">
+            <h2>Done</h2>
+            <div class="task-list" id="done"></div>
+            <button class="add-action-btn" onclick="openSelection('done')">+</button>
+            <button class="confirm-btn" id="confirm-done" onclick="confirmMove('done')">✓</button>
+        </div>
+
+    </div>
 </body>
 </html>
